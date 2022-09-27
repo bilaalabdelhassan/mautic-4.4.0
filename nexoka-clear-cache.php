@@ -1,5 +1,5 @@
 <?php 
-	echo("<script>console.log('Nexoka Custom Log');</script>");
+	echo("Nexoka Custom");
 	sleep(240);
 	system("rm -rf var/cache/*");
 ?>
