@@ -1,7 +1,9 @@
 #!/bin/bash
-echo Before Timer
-ls -la var/
+echo Before Cache Clear
+#ls -la var/
+ls -la app/
 sleep 240
-rm -rf var/cache/*
-echo After Timer
+#rm -rf var/cache/*
+php bin/console cache:clear
+echo After Cache Clear
 exit

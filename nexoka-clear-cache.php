@@ -1,5 +1,5 @@
 <?php 
-	echo("Before Timer");
+	echo("Before Timer - php");
 	sleep(240);
 	$files = glob('var/cache/*'); // get all file names
 	foreach($files as $file){ // iterate files
@@ -7,5 +7,5 @@
 		unlink($file); // delete file
 	  }
 	}
-	echo("After Timer");
+	echo("After Timer - php");
 ?>
