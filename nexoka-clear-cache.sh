@@ -1,12 +1,8 @@
-#!/usr/bin/env bash
-PHP=`which php`
-#echo Before Cache Clear
-echo app folder
-ls app/
-echo var folder
-ls var/
-echo $PHP
+#!/bin/bash
+#PHP=`which php`
+#echo $PHP
+# Check if another instance of this script is running
+pidof -o %PPID -x $0 >/dev/null && echo "ERROR: Script $0 already running" && exit 1
 sleep 240
-#$PHP bin/console cache:clear
-#echo After Cache Clear
+/app/.heroku/php/bin/php bin/console cache:clear
 exit
