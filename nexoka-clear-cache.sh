@@ -6,5 +6,5 @@ pidof -o %PPID -x $0 >/dev/null && echo "ERROR: Script $0 already running" && ex
 sleep 240
 #/app/.heroku/php/bin/php bin/console cache:clear
 echo Clearing cache...
-rm -rf app/cache/*
+sudo rm -rf app/cache/*
 exit
